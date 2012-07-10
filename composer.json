@@ -1,0 +1,30 @@
+{
+    "name": "jms/serializer-service-provider",
+    "description": "Silex Service Provider for the Serializer Bundle",
+    "keywords": [ "serializer", "Silex", "JMSSerializerBundle" ],
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Johannes M. Schmitt",
+            "email": "schmittjoh@gmail.com",
+            "homepage": "http://jmsyst.com"
+        },
+        {
+            "name": "Marijn Huizendveld",
+            "email": "marijn@pink-tie.com",
+            "homepage": "http://marijn.huizendveld.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "silex/silex": "dev-master",
+        "symfony/routing": "2.1.*",
+        "jms/serializer-bundle": ">=0.9"
+    },
+    "require-dev": {
+        "doctrine/common": ">=2.1,<2.4-dev"
+    },
+    "autoload": {
+        "psr-0": { "JMS\\SerializerServiceProvider": "src/" }
+    }
+}
