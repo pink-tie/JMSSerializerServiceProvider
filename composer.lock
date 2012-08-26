@@ -1,5 +1,5 @@
 {
-    "hash": "d85df42e276be5458e0c447d7a4466d6",
+    "hash": "5be98432c676ece1c7b76e046c788e18",
     "packages": [
         {
             "package": "jms/metadata",
@@ -10,14 +10,20 @@
         {
             "package": "jms/metadata",
             "version": "dev-master",
-            "source-reference": "dbfbb15b3ffdf96c5ff14e5cd4451d78a7083a36",
-            "commit-date": "1339680164"
+            "source-reference": "7c58d49ff13de62464837c3c7d91aff1deb2c442",
+            "commit-date": "1345552810"
         },
         {
             "package": "jms/serializer-bundle",
             "version": "dev-master",
-            "source-reference": "6df19222b597ab6f44c67dde4499766a5ca1fb99",
-            "commit-date": "1341570103"
+            "alias-pretty-version": "0.9.x-dev",
+            "alias-version": "0.9.9999999.9999999-dev"
+        },
+        {
+            "package": "jms/serializer-bundle",
+            "version": "dev-master",
+            "source-reference": "1f308a587742246e87e580290f3bae23073d1d70",
+            "commit-date": "1343641450"
         },
         {
             "package": "pimple/pimple",
@@ -28,14 +34,20 @@
         {
             "package": "pimple/pimple",
             "version": "dev-master",
-            "source-reference": "d2cfa2f02f50abef65c238747c753a5f6786f6be",
-            "commit-date": "1341139100"
+            "source-reference": "db836b8cfadc0f39dacafa2bf311a1ab603600bb",
+            "commit-date": "1343051648"
         },
         {
             "package": "silex/silex",
             "version": "dev-master",
-            "source-reference": "4679d476aee0a5981b13d4ac899a8ef72b8b060c",
-            "commit-date": "1341899486"
+            "alias-pretty-version": "1.0.x-dev",
+            "alias-version": "1.0.9999999.9999999-dev"
+        },
+        {
+            "package": "silex/silex",
+            "version": "dev-master",
+            "source-reference": "331454f7235da0aea8bd9c7e5fe5cfd9f043a069",
+            "commit-date": "1345728064"
         },
         {
             "package": "symfony/event-dispatcher",
@@ -46,8 +58,8 @@
         {
             "package": "symfony/event-dispatcher",
             "version": "dev-master",
-            "source-reference": "0dc437f2eca7dea19facfde6db7f7f5e8e71d0bc",
-            "commit-date": "1341838460"
+            "source-reference": "421520fd35ace52106947b2d6c2d9db49cb5a866",
+            "commit-date": "1345643321"
         },
         {
             "package": "symfony/http-foundation",
@@ -58,8 +70,8 @@
         {
             "package": "symfony/http-foundation",
             "version": "dev-master",
-            "source-reference": "985f3aa6c9f8074b2d1a12345e0768f8c24aa72d",
-            "commit-date": "1341838460"
+            "source-reference": "e706e8673fc139de5d1ee4d2f2b8998d23e852b5",
+            "commit-date": "1345643321"
         },
         {
             "package": "symfony/http-kernel",
@@ -70,8 +82,8 @@
         {
             "package": "symfony/http-kernel",
             "version": "dev-master",
-            "source-reference": "ff65fbaa20ace7e39ce6df92afe97c5c9586a2d1",
-            "commit-date": "1341849771"
+            "source-reference": "27e082967d9f417a0ad2f853ee4e37f6b752aa98",
+            "commit-date": "1345973524"
         },
         {
             "package": "symfony/routing",
@@ -82,24 +94,11 @@
         {
             "package": "symfony/routing",
             "version": "dev-master",
-            "source-reference": "67c72b042d753e6ee3675eb4b0c2165243d34055",
-            "commit-date": "1341890620"
+            "source-reference": "d16a85b229a7a01790998ad6bf66142860c3de5b",
+            "commit-date": "1345914223"
         }
     ],
-    "packages-dev": [
-        {
-            "package": "doctrine/common",
-            "version": "dev-master",
-            "alias-pretty-version": "2.3.x-dev",
-            "alias-version": "2.3.9999999.9999999-dev"
-        },
-        {
-            "package": "doctrine/common",
-            "version": "dev-master",
-            "source-reference": "b3afbb80506d909743475c5b0904285ab0c07941",
-            "commit-date": "1341670930"
-        }
-    ],
+    "packages-dev": null,
     "aliases": [
 
     ],

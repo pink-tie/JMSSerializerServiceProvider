@@ -26,5 +26,6 @@
     },
     "autoload": {
         "psr-0": { "JMS\\SerializerServiceProvider": "src/" }
-    }
+    },
+    "minimum-stability": "dev"
 }
