@@ -2,17 +2,20 @@
     "name": "jms/serializer-service-provider",
     "description": "Silex Service Provider for the Serializer Bundle",
     "keywords": [ "serializer", "Silex", "JMSSerializerBundle" ],
-    "license": "Apache-2.0",
+    "homepage": "http://jmsyst.com/bundles/JMSSerializerBundle",
+    "license": "MIT",
     "authors": [
         {
             "name": "Johannes M. Schmitt",
             "email": "schmittjoh@gmail.com",
-            "homepage": "http://jmsyst.com"
+            "homepage": "http://jmsyst.com",
+            "role": "Developer of wrapped JMSSerializerBundle"
         },
         {
             "name": "Marijn Huizendveld",
             "email": "marijn@pink-tie.com",
-            "homepage": "http://marijn.huizendveld.com"
+            "homepage": "http://marijn.huizendveld.com",
+            "role": "Developer of JMSSerializerServiceProvider"
         }
     ],
     "require": {
@@ -26,5 +29,10 @@
     },
     "autoload": {
         "psr-0": { "JMS\\SerializerServiceProvider": "src/" }
+    },
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://github.com/pink-tie/JMSSerializerServiceProvider/issues",
+        "source": "https://github.com/pink-tie/JMSSerializerServiceProvider/tree/0.1.0"
     }
 }

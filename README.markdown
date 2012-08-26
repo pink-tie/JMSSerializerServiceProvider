@@ -146,7 +146,22 @@ $app->get("/pages/{id}.{_format}", function ($id) use ($app) {
     ->assert("id", "\d+");
 ```
 
+License:
+--------
+This service provider is available under the [`MIT LICENSE`][5]. Please note
+that the required `JMSSerializerBundle` is made available under the [`Apache 2
+LICENCE`][6].
+
+Credits:
+--------
+
+Allow me to thank [Johannes Schmitt][7] (@schmittjoh) for making the
+`JMSSerializerBundle`. 
+
 [1]: http://jmsyst.com/bundles/JMSSerializerBundle
 [2]: http://php.net/manual/en/datetime.formats.php
 [3]: http://php.net/manual/en/timezones.php
 [4]: http://jmsyst.com/bundles/JMSSerializerBundle/master/reference/annotations
+[5]: https://github.com/pink-tie/JMSSerializerServiceProvider/blob/release/0.1.0/LICENSE
+[6]: https://github.com/schmittjoh/JMSSerializerBundle/blob/master/Resources/meta/LICENSE
+[7]: http://jmsyst.com
