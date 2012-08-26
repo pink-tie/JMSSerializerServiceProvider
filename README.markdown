@@ -162,6 +162,6 @@ Allow me to thank [Johannes Schmitt][7] (@schmittjoh) for making the
 [2]: http://php.net/manual/en/datetime.formats.php
 [3]: http://php.net/manual/en/timezones.php
 [4]: http://jmsyst.com/bundles/JMSSerializerBundle/master/reference/annotations
-[5]: https://github.com/pink-tie/JMSSerializerServiceProvider/blob/master/LICENSE
+[5]: https://github.com/pink-tie/JMSSerializerServiceProvider/blob/release/0.1.0/LICENSE
 [6]: https://github.com/schmittjoh/JMSSerializerBundle/blob/master/Resources/meta/LICENSE
 [7]: http://jmsyst.com
