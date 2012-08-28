@@ -89,12 +89,12 @@ XML;
 
         foreach($files as $file) {
             if ($file->isDir()){
-                rmdir($file->getRealPath());
+                @rmdir($file->getRealPath());
             } else {
-                unlink($file->getRealPath());
+                @unlink($file->getRealPath());
             }
         }
 
-        rmdir($directory);
+        @rmdir($directory);
     }
 }
