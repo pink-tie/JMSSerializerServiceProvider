@@ -2,6 +2,9 @@ The `SerializerServiceProvider` provides a service for serializing
 objects. This service provider uses the [`JMS\SerializerBundle`][1] for
 serializing.
 
+[![Build Status](https://secure.travis-ci.org/pink-tie/JMSSerializerServiceProvider.png)](http://travis-ci.org/pink-tie/JMSSerializerServiceProvider)
+
+
 Parameters
 ----------
 
