@@ -47,7 +47,7 @@ Registering
 $app = new Silex\Application();
 
 $app->register(new JMS\SerializerServiceProvider\SerializerServiceProvider(), array(
-    'serializer.src_directory' => 'path/to/vendor/jms/serializer-bundle/src',
+    'serializer.src_directory' => 'path/to/vendor/jms/serializer-bundle',
     'serializer.cache.directory' => 'path/to/cache'
 ));
 ```
