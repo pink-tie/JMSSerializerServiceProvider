@@ -1,5 +1,5 @@
 {
-    "name": "jms/serializer-service-provider",
+    "name": "mowcixo/serializer-service-provider",
     "description": "Silex Service Provider for the Serializer Bundle",
     "keywords": [ "serializer", "Silex", "JMSSerializerBundle" ],
     "homepage": "http://jmsyst.com/bundles/JMSSerializerBundle",
