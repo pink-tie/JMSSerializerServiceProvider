@@ -31,7 +31,6 @@
     "autoload": {
         "psr-0": { "JMS\\SerializerServiceProvider": "src/" }
     },
-    "minimum-stability": "dev",
     "support": {
         "issues": "https://github.com/pink-tie/JMSSerializerServiceProvider/issues",
         "source": "https://github.com/pink-tie/JMSSerializerServiceProvider/tree/0.1.0"
