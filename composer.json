@@ -20,12 +20,13 @@
     ],
     "require": {
         "php": ">=5.3.3",
-        "silex/silex": "dev-master",
+        "silex/silex": "1.*",
         "symfony/routing": "2.1.*",
         "jms/serializer-bundle": "0.9.*"
     },
     "require-dev": {
-        "doctrine/common": ">=2.1,<2.4-dev"
+        "doctrine/common": ">=2.1,<2.4-dev",
+        "phpunit/phpunit": "3.*"
     },
     "autoload": {
         "psr-0": { "JMS\\SerializerServiceProvider": "src/" }
