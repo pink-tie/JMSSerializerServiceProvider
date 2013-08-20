@@ -21,7 +21,6 @@
     "require": {
         "php": ">=5.3.3",
         "silex/silex": "1.*",
-        "symfony/routing": "2.1.*",
         "jms/serializer-bundle": "0.9.*"
     },
     "require-dev": {
