@@ -20,7 +20,7 @@
     ],
     "require": {
         "php": ">=5.3.3",
-        "silex/silex": "dev-master",
+        "silex/silex": "~1.1",
         "symfony/routing": "2.3.*",
         "jms/serializer-bundle": "0.11.*"
     },
