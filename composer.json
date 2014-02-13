@@ -22,7 +22,7 @@
         "php": ">=5.3.3",
         "silex/silex": "~1.1",
         "symfony/routing": "2.3.*",
-        "jms/serializer-bundle": "0.11.*"
+        "jms/serializer-bundle": "0.13.*"
     },
     "require-dev": {
         "doctrine/common": ">=2.1,<2.4-dev"
