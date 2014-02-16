@@ -1,4 +1,5 @@
-__Warning__: this is a stripped down version of the SerializerServiceProvider using Serializer in version 0.13.
+__Warning__: this is a stripped down, quick and dirty hack version of the SerializerServiceProvider using SerializerBundle in version 0.13.
+
 DO NOT use in production, DO NOT use to replace your current service provider in production!
 
 The `SerializerServiceProvider` provides a service for serializing
