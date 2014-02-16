@@ -1,3 +1,6 @@
+__Warning__: this is a stripped down version of the SerializerServiceProvider using Serializer in version 0.13.
+DO NOT use in production, DO NOT use to replace your current service provider in production!
+
 The `SerializerServiceProvider` provides a service for serializing
 objects. This service provider uses the [`JMS\SerializerBundle`][1] for
 serializing.
