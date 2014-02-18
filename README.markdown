@@ -1,9 +1,6 @@
-__Warning__: this is a stripped down, quick and dirty hack version of the SerializerServiceProvider using SerializerBundle in version 0.13.
-
-DO NOT use in production, DO NOT use to replace your current service provider in production!
 
 The `SerializerServiceProvider` provides a service for serializing
-objects. This service provider uses the [`JMS\SerializerBundle`][1] for
+objects. This service provider uses [`JMS\Serializer`][1] for
 serializing.
 
 [![Build Status](https://secure.travis-ci.org/pink-tie/JMSSerializerServiceProvider.png)](http://travis-ci.org/pink-tie/JMSSerializerServiceProvider)
@@ -18,12 +15,6 @@ Parameters
 * `serializer.cache.directory`: The directory to use for storing the
 metadata cache.
 
-* `serializer.naming_strategy.seperator` (optional): The separator
-string used when normalizing properties.
-
-* `serializer.naming_strategy.lower_case` (optional): Boolean flag
-indicating if the properties should be normalized as lower case strings.
-
 * `serializer.date_time_handler.format` (optional): The format used to
 serialize and deserialize `DateTime` objects. Refer to the [PHP
 documentation for supported Date/Time formats][2].
@@ -32,15 +23,12 @@ documentation for supported Date/Time formats][2].
 timezone to use when serializing and deserializing `DateTime` objects.
 Refer to the [PHP documentation for a list of supported timezones][3].
 
-* `serializer.disable_external_entities` (optional): Boolean flag
-indicating if the serializer should disable external entities for the
-XML serialization format.
 
 Services
 --------
 
 * `serializer`: An instance of
-`JMS\SerializerBundle\Serializer\Serializer`.
+`JMS\Serializer\Serializer`.
 
 Registering
 -----------
@@ -52,7 +40,8 @@ $app = new Silex\Application();
 
 $app->register(new JMS\SerializerServiceProvider\SerializerServiceProvider(), array(
     'serializer.src_directory' => 'path/to/vendor/jms/serializer-bundle',
-    'serializer.cache.directory' => 'path/to/cache'
+    'serializer.cache.directory' => 'path/to/cache',
+    'serializer.date_time_handler.format' => 'Y-m-d H:i'
 ));
 ```
 
@@ -65,7 +54,7 @@ documentation][4]
 ```php
 <?php
 
-use JMS\SerializerBundle\Annotation;
+use JMS\Serializer\Annotation;
 
 // The serializer bundle doesn't need getters or setters
 class Page
@@ -104,7 +93,7 @@ class Page
 
 ```php
 <?php
-use JMS\SerializerBundle\Annotation;
+use JMS\Serializer\Annotation;
 
 // The serializer bundle doesn't need getters or setters
 class Author
@@ -156,19 +145,19 @@ $app->get("/pages/{id}.{_format}", function ($id) use ($app) {
 License:
 --------
 This service provider is available under the [`MIT LICENSE`][5]. Please note
-that the required `JMSSerializerBundle` is made available under the [`Apache 2
+that the required `JMSSerializer` is made available under the [`Apache 2
 LICENCE`][6].
 
 Credits:
 --------
 
-Allow me to thank [Johannes Schmitt][7] (@schmittjoh) for making the
-`JMSSerializerBundle`. 
+Allow me to thank [Johannes Schmitt][7] (@schmittjoh) for making
+`JMSSerializer`.
 
-[1]: http://jmsyst.com/bundles/JMSSerializerBundle
+[1]: http://jmsyst.com/libs/serializer
 [2]: http://php.net/manual/en/datetime.formats.php
 [3]: http://php.net/manual/en/timezones.php
 [4]: http://jmsyst.com/bundles/JMSSerializerBundle/master/reference/annotations
 [5]: https://github.com/pink-tie/JMSSerializerServiceProvider/blob/release/0.1.0/LICENSE
-[6]: https://github.com/schmittjoh/JMSSerializerBundle/blob/master/Resources/meta/LICENSE
+[6]: https://github.com/schmittjoh/serializer/blob/master/LICENSE
 [7]: http://jmsyst.com
