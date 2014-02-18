@@ -49,11 +49,10 @@ class SerializerServiceProviderTest extends \PHPUnit_Framework_TestCase
         $app = new Application();
 
         $app->register(new SerializerServiceProvider(), array(
-            'serializer.cache.directory' => $this->cache,
-            'serializer.src_directory' => __DIR__."/../../../../vendor/jms/serializer-bundle"
+            'serializer.cache.directory' => $this->cache
         ));
 
-        $this->assertInstanceOf("JMS\SerializerBundle\Serializer\Serializer", $app['serializer']);
+        $this->assertInstanceOf("JMS\Serializer\Serializer", $app['serializer']);
 
         return $app;
     }

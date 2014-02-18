@@ -20,17 +20,44 @@ class SerializerServiceProvider implements ServiceProviderInterface
     public function register(Application $app)
     {
 
-        $app['serializer'] = $app->share(function() use ($app) {
+        /**
+         * We're defining serializer.builder here, so that a user could redefine his own
+         * serializer later inside the app using $app->share()
+         */
+        $app['serializer.builder'] = $app->share(function() use ($app){
+            if(!isset($app['serializer.cache.directory'])){
+                throw new \Exception(
+                    'Could not register SerializerServiceProvider, setting serializer.cache.directory is mandatory!'
+                );
+            }
             return SerializerBuilder::create()
             ->addDefaultHandlers()
-            ->configureHandlers(function(HandlerRegistry $registry) use ($app) {
-                $registry->registerSubscribingHandler(new DateHandler(
-                    $app['serializer.date_time_handler.format'],
-                    $app['serializer.date_time_handler.timezone']
-                ));
-            })
-            ->setCacheDir($app['serializer.cache.directory'])
-            ->setDebug(false)
+            ->setCacheDir($app['serializer.cache.directory']);
+        });
+
+        $app['serializer'] = $app->share(function() use ($app) {
+
+            if(isset($app['serializer.date_time_handler.format'])){
+                // Set a default for the timezone
+                if(!isset($app['serializer.date_time_handler.timezone'])){
+                    $app['serializer.date_time_handler.timezone'] = 'UTC';
+                }
+
+                $app['serializer.builder']
+                ->configureHandlers(function(HandlerRegistry $registry) use ($app) {
+                    $registry->registerSubscribingHandler(new DateHandler(
+                        $app['serializer.date_time_handler.format'],
+                        $app['serializer.date_time_handler.timezone']
+                    ));
+                });
+            }
+
+            if(!isset($app['serializer.debug'])){
+                $app['serializer.debug'] = false;
+            }
+
+            return $app['serializer.builder']
+            ->setDebug($app['serializer.debug'])
             ->build();
         });
     }
