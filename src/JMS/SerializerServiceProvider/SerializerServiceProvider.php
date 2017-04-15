@@ -46,7 +46,7 @@ class SerializerServiceProvider implements ServiceProviderInterface
         });
         
         $app['serializer.metadata.annotation_reader'] = $app->share(function () use ($app) {
-            AnnotationRegistry::registerAutoloadNamespace("JMS\SerializerBundle\Annotation", $app['serializer.src_directory']);
+            AnnotationRegistry::registerAutoloadNamespace('JMS\SerializerBundle\Annotation', $app['serializer.src_directory']);
 
             return new AnnotationReader();
         });
